@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de Factures</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .btn { padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+        .btn:hover { background: #0056b3; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f8f9fa; }
+    </style>
+</head>
+<body>
+    <h1>Générateur de Factures</h1>
+    <nav>
+        <a href="{% url 'liste_factures' %}" class="btn">Liste des factures</a>
+        <a href="{% url 'creer_facture' %}" class="btn">Nouvelle facture</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
